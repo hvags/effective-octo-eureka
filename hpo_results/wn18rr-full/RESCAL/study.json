@@ -1,0 +1,12 @@
+{
+  "evaluator": "rankbased",
+  "filter_validation_when_testing": true,
+  "loss": "crossentropy",
+  "metric": "adjusted_arithmetic_mean_rank_index",
+  "model": "rescal",
+  "optimizer": "adam",
+  "pykeen_git_hash": "UNHASHED",
+  "pykeen_version": "1.5.0",
+  "regularizer": "lp",
+  "training_loop": "lcwa"
+}

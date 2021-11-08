@@ -1,0 +1,12 @@
+{
+  "evaluator": "rankbased",
+  "filter_validation_when_testing": true,
+  "loss": "marginranking",
+  "metric": "adjusted_arithmetic_mean_rank_index",
+  "model": "transd",
+  "negative_sampler": "basic",
+  "optimizer": "adam",
+  "pykeen_git_hash": "UNHASHED",
+  "pykeen_version": "1.5.0",
+  "training_loop": "slcwa"
+}
