@@ -1,7 +1,11 @@
 # effective-octo-eureka
 inf367 final project
 
-This is the https://github.com/hvags/effective-octo-eureka repository, which contains the implementation of our final project. The code pertaining to the execution of the embedding pipelines is presented in three sequential notebooks. All data and notebooks are available in the github repository. 
+This is the https://github.com/hvags/effective-octo-eureka repository, which contains the implementation of our final project. The code pertaining to the execution of the embedding pipelines is presented in three sequential notebooks. The notebooks are set up to be possible to run end-to-end in sequence.
+
+**Note: Particularly notebooks *2_hpo* and *3_reporting* will trigger the training of all models on all datasets if left untouched before running.**
+
+All data and notebooks are available in the github repository. 
 
 ## Data preprocessing
 *1_triple_data_manipulation.ipynb*
@@ -23,6 +27,16 @@ must bring their own working environment.
 
 The HPO pipeline writes the opitimization results to a local 'hpo_results/{dataset}/{model}' directory
 particular to each dataset and model, from which it can be read by the next step. For 
+
+## Pipeline evaulation
+*3_reporting.ipynb*
+
+This notebook retrieves the best pipeline configuration produced by the HPO notebook, and runs a standard PyKeen
+pipeline on the same dataset. Note that the model is retrained using the training data and evaluated using the
+test data, unlike the HPO which evaluates using the validation data during trials.
+
+If ran in its entirety, this notebook will train and evaluate all the specified models on all available data sets,
+and output a metrics table for each dataset showing how each model performs on that data.
 
 ## Data set analysis
 
