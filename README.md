@@ -1,7 +1,7 @@
 # effective-octo-eureka
 inf367 final project
 
-This repository contains the implementation of the project. The code pertaining to the execution of the embedding pipelines is presented in three sequential notebooks.
+This is the https://github.com/hvags/effective-octo-eureka repository, which contains the implementation of our final project. The code pertaining to the execution of the embedding pipelines is presented in three sequential notebooks. All data and notebooks are available in the github repository at 
 
 ## Data preprocessing
 *1_triple_data_manipulation.ipynb*
