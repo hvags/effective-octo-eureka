@@ -1,7 +1,11 @@
 # effective-octo-eureka
 inf367 final project
 
-This is the https://github.com/hvags/effective-octo-eureka repository, which contains the implementation of our final project. The code pertaining to the execution of the embedding pipelines is presented in three sequential notebooks. All data and notebooks are available in the github repository. 
+This is the https://github.com/hvags/effective-octo-eureka repository, which contains the implementation of our final project. The code pertaining to the execution of the embedding pipelines is presented in three sequential notebooks. The notebooks are set up to be possible to run end-to-end in sequence.
+
+**Note: Particularly notebooks *2_hpo* and *3_reporting* will trigger the training of all models on all datasets if left untouched before running.**
+
+All data and notebooks are available in the github repository. 
 
 ## Data preprocessing
 *1_triple_data_manipulation.ipynb*
@@ -24,12 +28,27 @@ must bring their own working environment.
 The HPO pipeline writes the opitimization results to a local 'hpo_results/{dataset}/{model}' directory
 particular to each dataset and model, from which it can be read by the next step. For 
 
+## Pipeline evaulation
+*3_reporting.ipynb*
+
+This notebook retrieves the best pipeline configuration produced by the HPO notebook, and runs a standard PyKeen
+pipeline on the same dataset. Note that the model is retrained using the training data and evaluated using the
+test data, unlike the HPO which evaluates using the validation data during trials.
+
+If ran in its entirety, this notebook will train and evaluate all the specified models on all available data sets,
+and output a metrics table for each dataset showing how each model performs on that data.
+
 ## Data set analysis
 
 To calculate the number of entities and number of relations for each of the new data sets (12 data sets), as well as the distribution of 1-1 and 1-N/N-1/N-N 
-triples in the new and the original FB15k-237 and WN18RR data sets (12 + 6 original data sets), a Matlab routine is used. One can either load all of the data 
+triples in the new and the original FB15k-237 and WN18RR data sets (12 + 6 original data sets), a Matlab routine is used.
+
+One can either load all of the data 
 sets in the folders /data/fb15k-237 (9 files) and /data/wn18rr (9 files), or open the worksheet file Including_New_Datasets_project.mat inside
-the folder \Matlab_procedure\Workspace which cointains all of the mentioned files as appropriate matrices. One also has to open the script 
+the folder \Matlab_procedure\Workspace which cointains all of the mentioned files as appropriate matrices.
+
+One must also open the script 
 Count_entities_and_relations.py and Count_1_1_and_N_N_relations.py which are found in the folder \Matlab_procedure\Scripts. These scripts should then be run.
+
 This will output and save to the worksheet 2 matrices/list (Output_Table_entities_and_relations and Output_Table_1_1_N_N_relations) which gives the information
 that is summarized in Table 2 and Table 3 in the report, respectively.
