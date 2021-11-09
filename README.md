@@ -27,9 +27,14 @@ particular to each dataset and model, from which it can be read by the next step
 ## Data set analysis
 
 To calculate the number of entities and number of relations for each of the new data sets (12 data sets), as well as the distribution of 1-1 and 1-N/N-1/N-N 
-triples in the new and the original FB15k-237 and WN18RR data sets (12 + 6 original data sets), a Matlab routine is used. One can either load all of the data 
+triples in the new and the original FB15k-237 and WN18RR data sets (12 + 6 original data sets), a Matlab routine is used.
+
+One can either load all of the data 
 sets in the folders /data/fb15k-237 (9 files) and /data/wn18rr (9 files), or open the worksheet file Including_New_Datasets_project.mat inside
-the folder \Matlab_procedure\Workspace which cointains all of the mentioned files as appropriate matrices. One also has to open the script 
+the folder \Matlab_procedure\Workspace which cointains all of the mentioned files as appropriate matrices.
+
+One must also open the script 
 Count_entities_and_relations.py and Count_1_1_and_N_N_relations.py which are found in the folder \Matlab_procedure\Scripts. These scripts should then be run.
+
 This will output and save to the worksheet 2 matrices/list (Output_Table_entities_and_relations and Output_Table_1_1_N_N_relations) which gives the information
 that is summarized in Table 2 and Table 3 in the report, respectively.
