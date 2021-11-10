@@ -8,6 +8,8 @@ This is the https://github.com/hvags/effective-octo-eureka repository, which con
 The notebooks can be run locally or in a hosted service, but are currently configured to use local data.
 To change this refer to instructions in the notebooks themselves.
 
+Go to https://colab.research.google.com/github/hvags/effective-octo-eureka/blob/main/ to access the notebooks directly from Google Colab
+
 The PyKeen pipelines are run on a GPU by default, change the appropriate parameter in the notebook to
 run on cpu instead.
 
@@ -32,7 +34,7 @@ that if running the notebook locally the first cell with instructions should be 
 must bring their own working environment.
 
 The HPO pipeline writes the opitimization results to a local 'hpo_results/{dataset}/{model}' directory
-particular to each dataset and model, from which it can be read by the next step. For 
+particular to each dataset and model, from which it can be read by the next step. 
 
 ## Pipeline evaulation
 *3_reporting.ipynb*
