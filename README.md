@@ -5,6 +5,12 @@ This is the https://github.com/hvags/effective-octo-eureka repository, which con
 
 **Note: Particularly notebooks *2_hpo* and *3_reporting* will trigger the training of all models on all datasets if left untouched before running.**
 
+The notebooks can be run locally or in a hosted service, but are currently configured to use local data.
+To change this refer to instructions in the notebooks themselves.
+
+The PyKeen pipelines are run on a GPU by default, change the appropriate parameter in the notebook to
+run on cpu instead.
+
 All data and notebooks are available in the github repository. 
 
 ## Data preprocessing
@@ -21,7 +27,7 @@ be written to the same directories for further processing in the next step.
 
 The notebook retrieves data from the directories populated by the previous one. It also allows
 retrieving the preprocessed datasets from a project github repository  to allow the notebook to run
-in runtime environments suchas Google Colab without needing to handle the dataset files manually. Note
+in runtime environments such as Google Colab without needing to handle the dataset files manually. Note
 that if running the notebook locally the first cell with instructions should be skipped, but the user
 must bring their own working environment.
 
