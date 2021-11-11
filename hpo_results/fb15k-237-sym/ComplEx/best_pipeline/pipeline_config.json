@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "_stopper_comment": "While the original config had 100, early stopping will now switch it to 50",
+    "_stopper_kwargs_removed_comment": "stopper_kwargs config removed after HPO: {'frequency': 10, 'patience': 2, 'relative_delta': 0.01}",
+    "best_trial_evaluation": 0.21088486980511226,
+    "best_trial_number": 3,
+    "git_hash": "UNHASHED",
+    "version": "1.5.0"
+  },
+  "pipeline": {
+    "evaluator": "rankbased",
+    "filter_validation_when_testing": true,
+    "loss": "marginranking",
+    "loss_kwargs": {
+      "margin": 2,
+      "margin_activation": "relu"
+    },
+    "model": "complex",
+    "model_kwargs": {
+      "embedding_dim": 160
+    },
+    "negative_sampler": "basic",
+    "negative_sampler_kwargs": {
+      "num_negs_per_pos": 67
+    },
+    "optimizer": "adam",
+    "optimizer_kwargs": {
+      "lr": 0.014255170038050182
+    },
+    "regularizer": "lp",
+    "regularizer_kwargs": {
+      "weight": 0.021737554949974758
+    },
+    "testing": "<user defined>",
+    "training": "<user defined>",
+    "training_kwargs": {
+      "batch_size": 256,
+      "num_epochs": 50,
+      "use_tqdm_batch": false
+    },
+    "training_loop": "slcwa",
+    "validation": "<user defined>"
+  }
+}
