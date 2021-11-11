@@ -15,6 +15,11 @@ run on cpu instead.
 
 All data and notebooks are available in the github repository. 
 
+## Pragmatic adaptations to the hpo optimization
+Due to GPU capacity constraints, the following adaptations were made in the production of the pre-computed hpo trials:
+
+- All RotatE models were trained with an sLCWA training loop
+
 ## Data preprocessing
 *1_triple_data_manipulation.ipynb*
 
