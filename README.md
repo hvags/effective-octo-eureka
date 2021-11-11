@@ -3,7 +3,7 @@ inf367 final project
 
 This is the https://github.com/hvags/effective-octo-eureka repository, which contains the implementation of our final project. The code pertaining to the execution of the embedding pipelines is presented in three sequential notebooks. The notebooks are set up to be possible to run end-to-end in sequence.
 
-**Note: Particularly notebooks *2_hpo* and *3_reporting* will trigger the training of all models on all datasets if left untouched before running.**
+**Note: Notebooks *2_hpo* and *3_reporting* will trigger the training of all models on all datasets if left untouched before running. This may take a while.**
 
 The notebooks can be run locally or in a hosted service, but are currently configured to use local data.
 To change this refer to instructions in the notebooks themselves.
@@ -14,12 +14,6 @@ The PyKeen pipelines are run on a GPU by default, change the appropriate paramet
 run on cpu instead.
 
 All data and notebooks are available in the github repository. 
-
-## Pragmatic adaptations to the hpo optimization
-Due to GPU capacity constraints, the following adaptations were made in the production of the pre-computed hpo trials:
-
-- RotatE models were trained with an sLCWA training loop, loss function dependent on the base dataset.
-- ComplEx and RESCAL models were trained with Margin Ranking Loss and an sLCWA training loop.
 
 ## Data preprocessing
 *1_triple_data_manipulation.ipynb*
