@@ -2,18 +2,18 @@
   "metadata": {
     "_stopper_comment": "While the original config had 30, early stopping will now switch it to 30",
     "_stopper_kwargs_removed_comment": "stopper_kwargs config removed after HPO: {'frequency': 10, 'patience': 2, 'relative_delta': 0.01}",
-    "best_trial_evaluation": 0.2835225297689306,
-    "best_trial_number": 4,
+    "best_trial_evaluation": 0.10763900552684635,
+    "best_trial_number": 8,
     "git_hash": "UNHASHED",
     "version": "1.5.0"
   },
   "pipeline": {
     "evaluator": "rankbased",
     "filter_validation_when_testing": true,
-    "loss": "nssa",
+    "loss": "marginranking",
     "loss_kwargs": {
-      "adversarial_temperature": 0.9320318929258846,
-      "margin": 3
+      "margin": 1,
+      "margin_activation": "relu"
     },
     "model": "transe",
     "model_kwargs": {
@@ -22,11 +22,11 @@
     },
     "negative_sampler": "basic",
     "negative_sampler_kwargs": {
-      "num_negs_per_pos": 1
+      "num_negs_per_pos": 25
     },
     "optimizer": "adam",
     "optimizer_kwargs": {
-      "lr": 0.01437693763132351
+      "lr": 0.0697820536585657
     },
     "testing": "<user defined>",
     "training": "<user defined>",
