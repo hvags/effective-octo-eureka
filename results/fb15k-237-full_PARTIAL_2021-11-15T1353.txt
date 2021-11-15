@@ -1,0 +1,9 @@
+fb15k-237-full
+  model      MRR   Hits@1  Hits@10
+ TransE  0.07643  0.03533  0.14911
+ TransH  0.11617  0.08832  0.17433
+ TransD   0.0801  0.04475  0.15241
+ TransR  0.06766  0.03109  0.13057
+ RESCAL      NaN      NaN      NaN
+ComplEx      NaN      NaN      NaN
+ RotatE      NaN      NaN      NaN
