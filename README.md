@@ -13,7 +13,7 @@ Go to https://colab.research.google.com/github/hvags/effective-octo-eureka/blob/
 The PyKeen pipelines are run on a GPU by default, change the appropriate parameter in the notebook to
 run on cpu instead.
 
-All data and notebooks are available in the github repository. 
+All original data, results and notebooks are available in the github repository. 
 
 ## Data preprocessing
 *1_triple_data_manipulation.ipynb*
@@ -45,6 +45,10 @@ test data, unlike the HPO which evaluates using the validation data during trial
 
 If ran in its entirety, this notebook will train and evaluate all the specified models on all available data sets,
 and output a metrics table for each dataset showing how each model performs on that data.
+
+The final pipeline results are written to a local 'results' directory. For the sample results, data from the
+fb15k-237-full dataset is split over several files. This is due to challenges in executing the pipeline in one
+operation, though the data is generated from the same model parameters and training data.
 
 ## Data set analysis
 
