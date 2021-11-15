@@ -1,0 +1,4 @@
+fb15k-237-full
+  model     MRR  Hits@1  Hits@10
+ComplEx 0.00063 0.00017  0.00056
+ RotatE 0.28856 0.19266  0.48811
